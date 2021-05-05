@@ -661,6 +661,10 @@ footer p {
         width: 91%;
         border-radius: 0;
     }
+    #les_plus_populaires img {
+        width: 40%;
+        min-width: 40%;
+    }
     /* SECTION 3 ---- #MARSEILLE --------------ACTIVITES ---------------- */
     #activites_a_marseille {
         flex-direction: column;
