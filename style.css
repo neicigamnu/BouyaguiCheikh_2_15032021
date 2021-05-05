@@ -371,17 +371,17 @@ aside {
     display: flex;
     background: white;
     border-radius: 20px;
-    /* width: 94%; */
     padding: 4px;
     margin: auto;
 }
 
 #les_plus_populaires img {
     border-radius: 20px 0 0 20px;
-    width: 40%;
+    width: 10vw;
     margin-right: 4%;
     height: 145px;
     object-fit: cover;
+    min-width: 10vw;
 }
 
 #les_plus_populaires figcaption {
@@ -734,6 +734,12 @@ footer p {
     .logementmarseille {
         width: auto;
         margin: 10px;
+    }
+    #les_plus_populaires img {
+        width: 40%;
+    }
+    #les_plus_populaires figcaption p {
+        margin-bottom: 4em;
     }
     .populaires h2 {
         margin-right: 260px;
