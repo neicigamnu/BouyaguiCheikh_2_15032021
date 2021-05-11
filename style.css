@@ -713,7 +713,7 @@ footer p {
     }
 }
 
-@media all and (max-width: 321px) {
+@media all and (max-width: 322px) {
     #logo img {
         left: 5%;
     }
