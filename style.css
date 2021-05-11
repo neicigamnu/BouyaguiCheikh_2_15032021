@@ -555,6 +555,9 @@ footer p {
         flex-wrap: wrap;
         height: 160px;
     }
+    #logo img {
+        left: 5%;
+    }
     #hebergements {
         order: 2;
         flex-basis: 50%;
@@ -638,7 +641,9 @@ footer p {
         margin-top: 25px;
         font-size: 1.125rem;
     }
-    #coeur,
+    #coeur {
+        margin-left: 0;
+    }
     #billet {
         margin-left: 0;
     }
@@ -707,6 +712,9 @@ footer p {
 /* ----------AJUSTEMENT IPHONE 8     ********375PX****--------------------------------------------- */
 
 @media all and (max-width: 376px) {
+    #logo img {
+        left: 5%;
+    }
     #recherche {
         width: 200px;
     }
@@ -725,96 +733,87 @@ footer p {
     }
 }
 
-@media all and (max-width: 321px) {}
-
-#recherche {
-    width: 180px;
+@media all and (max-width: 321px) {
+    #logo img {
+        left: 5%;
+    }
+    #recherche {
+        width: 180px;
+    }
+    #chien,
+    #coeur,
+    #billet {
+        margin-left: 0;
+    }
+    #enfant {
+        margin-left: 10px;
+    }
 }
 
-#chien,
-#coeur,
-#billet {
-    margin-left: 0;
-}
-
-#enfant {
-    margin-left: 10px;
-}
-
-
-}
 
 /* -------------------------------------------------------------------------------------------------------- */
 
+
 /* MEDIA QUERIES POUR TABLETTE / IPAD 768PX -----------------------------*/
 
+
 /* ------------------------------------------------------------------------------------------------------------*/
-@media all and (min-width: 551px) and (max-width: 1150px) {
+
+@media all and (min-width: 551px) and (max-width: 1130px) {
     main {
         padding-left: 25px;
     }
-    
+    #logo {
+        flex: 2;
+    }
     #filtres {
         font-size: 14px;
     }
-    
     #chien {
         width: 180px;
     }
-    
     #hebergements_a_marseille {
         flex-wrap: wrap-reverse;
     }
-    
     #les_plus_populaires,
     .logementmarseille {
         width: auto;
         margin: 10px;
     }
-    
     #les_plus_populaires img {
         width: 40%;
     }
-    
     #les_plus_populaires figcaption p {
         margin-bottom: 4em;
     }
-    
     .populaires h2 {
         margin-right: 260px;
     }
-    
     .logementmarseille img {
         width: 35vw;
         height: 15vh;
     }
-    
     .logementmarseille figure {
         height: auto;
     }
-    
     #activites_a_marseille {
         display: flex;
         flex-wrap: wrap;
     }
-    
     .garde,
     .fort {
         display: flex;
         margin-top: 35px;
     }
-    
     .fort1,
     .garde1 {
         margin-right: 35px;
     }
-    
     .port img,
     .calanques img {
         width: 90vw;
         height: 20vh;
     }
-    
     .img1 img,
     .img2 img,
     .img3 img,
@@ -822,11 +821,9 @@ footer p {
         width: 42vw;
         height: 20vh;
     }
-    
     footer {
         margin-right: -10px;
     }
-    
     #assistance {
         margin-left: 10%;
     }
