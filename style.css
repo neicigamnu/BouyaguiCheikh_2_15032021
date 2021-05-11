@@ -13,53 +13,64 @@ main {
     padding-left: 50px;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    padding: 15px 40px 0 0;
-}
-
-#hebergements {
-    margin-left: auto;
-}
-
-#hebergements a {
-    color: black;
-    font-size: 1.125rem;
-    padding-top: 43px;
-}
-
 a {
     text-decoration: none;
     color: black;
 }
 
-nav a {
-    padding: 15px 40px 0 40px;
+header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.125rem;
 }
 
-#activités a {
-    font-size: 1.125rem;
-    color: black;
-    padding-top: 43px;
+#hebergements {
+    flex: 1;
+    order: 1;
+    text-align: center;
+}
+
+#activités {
+    flex: 1;
+    order: 2;
+    text-align: center;
+}
+
+#logo {
+    flex: 6;
+    order: 0;
+}
+
+#logo img {
+    position: relative;
+    top: 20%;
 }
 
 #inscription {
-    color: #0065FC;
+    flex: 1;
+    order: 3;
+    text-align: center;
     font-weight: bold;
-    font-size: 1.125rem;
-    padding-left: 30px;
+    color: #0065fc;
+}
+
+.nav-hover:hover {
+    border-top: 3px solid #0065fc;
+}
+
+.flex-child {
+    line-height: 80px;
 }
 
 #inscription a {
     color: #0065FC;
 }
 
-#hebergements a:hover,
-#activités a:hover {
-    border-top: 3px solid #0065FC;
-    color: #0065FC;
+#activités a:hover,
+#hebergements a:hover {
+    color: #0065fc;
 }
 
 
@@ -111,15 +122,21 @@ button {
 
 /* barre de recherche finie*/
 
+ul {
+    list-style-type: none;
+}
+
+.liste_filtres {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px 0 0;
+}
+
 #filtres {
     display: flex;
     align-items: center;
     font-weight: 700;
     font-size: 1rem;
-}
-
-#filtres p {
-    margin-bottom: 10px;
 }
 
 .fa-child,
@@ -320,7 +337,7 @@ button {
 }
 
 .grey {
-    color: rgb(218, 214, 214);
+    color: #F2F2F2;
 }
 
 
@@ -534,6 +551,37 @@ footer p {
     main {
         padding: 0;
     }
+    header {
+        flex-wrap: wrap;
+        height: 160px;
+    }
+    #hebergements {
+        order: 2;
+        flex-basis: 50%;
+        border-bottom: 4px solid #F2F2F2;
+    }
+    #activités {
+        order: 3;
+        border-bottom: 4px solid #F2F2F2;
+        flex-basis: 50%;
+    }
+    #logo {
+        order: 0;
+        flex-basis: 70%;
+    }
+    #inscription {
+        order: 1;
+        flex-basis: 30%;
+    }
+    .nav-hover:hover {
+        border-top: none;
+        border-bottom: 5px solid #0065fc !important;
+        color: #0065fc;
+    }
+    #activités a:hover,
+    #hebergements a:hover {
+        color: #0065fc;
+    }
     #intro,
     #searchbar,
     #filtres,
@@ -543,64 +591,12 @@ footer p {
     #filtres {
         display: block;
     }
-    ul {
+    .liste_filtres {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
         align-content: center;
         padding: 0;
-    }
-    nav a {
-        padding: 15px 95px 0 40px;
-    }
-    #activités {
-        order: 1;
-    }
-    #hebergements {
-        order: 2;
-        margin-bottom: 20px;
-    }
-    #hebergements,
-    #activités {
-        order: 1;
-        width: 50%;
-        padding-bottom: 10px;
-    }
-    /* ligne  */
-    #hebergements {
-        border-bottom: solid 3px rgb(221, 221, 221);
-        /* padding: 0px 70px 10px 20px; */
-    }
-    #activités {
-        border-bottom: solid 3px rgb(221, 221, 221);
-    }
-    #hebergements,
-    #activités {
-        padding-bottom: 0;
-    }
-    /* enlever la marge bottom du texte et aligner avec activités */
-    ul #hebergements {
-        margin: 0px;
-    }
-    /* decaler le bouton inscription sur la droite */
-    #inscription {
-        margin-left: 55px;
-    }
-    #hebergements a:hover {
-        border-bottom: solid 3px #0065FC;
-        border-top: none;
-    }
-    #activités a:hover {
-        border-bottom: solid 3px #0065FC;
-        border-top: none;
-    }
-    /* -------espacement logo + s'inscrire***** d'activités / hebergements--------------- */
-    #logo {
-        line-height: 4em;
-        padding-left: 1em;
-    }
-    #inscription {
-        padding-bottom: 20px
     }
     /* PARTIE SECTION FILTRES */
     #intro h1 {
@@ -646,10 +642,6 @@ footer p {
     #billet {
         margin-left: 0;
     }
-    /* #enfant,
-    #chien {
-        margin-left: 15px;
-    } */
     /* HEBERGEMENT A MARSEILLE ---- SECTION 2 */
     #hebergements_a_marseille {
         flex-flow: column-reverse;
@@ -660,7 +652,7 @@ footer p {
         flex-direction: column;
         background-color: white;
         width: 80%;
-        margin-left: 15px;
+        margin-left: 7px;
         padding: 0;
     }
     .logementmarseille figure {
@@ -715,13 +707,6 @@ footer p {
 /* ----------AJUSTEMENT IPHONE 8     ********375PX****--------------------------------------------- */
 
 @media all and (max-width: 376px) {
-    #inscription {
-        margin-left: 18px;
-    }
-    #hebergements,
-    #activités {
-        padding-bottom: 0;
-    }
     #recherche {
         width: 200px;
     }
@@ -740,87 +725,96 @@ footer p {
     }
 }
 
-@media all and (max-width: 321px) {
-    nav a {
-        padding: 9px 72px 0px 21px;
-    }
-    #inscription {
-        margin-left: 4px;
-    }
-    #recherche {
-        width: 180px;
-    }
-    #chien,
-    #coeur,
-    #billet {
-        margin-left: 0;
-    }
-    #enfant {
-        margin-left: 10px;
-    }
+@media all and (max-width: 321px) {}
+
+#recherche {
+    width: 180px;
+}
+
+#chien,
+#coeur,
+#billet {
+    margin-left: 0;
+}
+
+#enfant {
+    margin-left: 10px;
 }
 
 
-/* -------------------------------------------------------------------------------------------------------- */
+}
 
+/* -------------------------------------------------------------------------------------------------------- */
 
 /* MEDIA QUERIES POUR TABLETTE / IPAD 768PX -----------------------------*/
 
-
 /* ------------------------------------------------------------------------------------------------------------*/
-
 @media all and (min-width: 551px) and (max-width: 1150px) {
     main {
         padding-left: 25px;
     }
+    
     #filtres {
         font-size: 14px;
     }
+    
     #chien {
         width: 180px;
     }
+    
     #hebergements_a_marseille {
         flex-wrap: wrap-reverse;
     }
+    
     #les_plus_populaires,
     .logementmarseille {
         width: auto;
         margin: 10px;
     }
+    
     #les_plus_populaires img {
         width: 40%;
     }
+    
     #les_plus_populaires figcaption p {
         margin-bottom: 4em;
     }
+    
     .populaires h2 {
         margin-right: 260px;
     }
+    
     .logementmarseille img {
         width: 35vw;
         height: 15vh;
     }
+    
     .logementmarseille figure {
         height: auto;
     }
+    
     #activites_a_marseille {
         display: flex;
         flex-wrap: wrap;
     }
+    
     .garde,
     .fort {
         display: flex;
         margin-top: 35px;
     }
+    
     .fort1,
     .garde1 {
         margin-right: 35px;
     }
+    
     .port img,
     .calanques img {
         width: 90vw;
         height: 20vh;
     }
+    
     .img1 img,
     .img2 img,
     .img3 img,
@@ -828,9 +822,11 @@ footer p {
         width: 42vw;
         height: 20vh;
     }
+    
     footer {
         margin-right: -10px;
     }
+    
     #assistance {
         margin-left: 10%;
     }

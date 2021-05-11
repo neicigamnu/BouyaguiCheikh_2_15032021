@@ -14,20 +14,14 @@
 <body>
     <main>
         <header>
-
-            <nav id="nav">
-
-
-                <ul>
-                    <li id="logo">
-                        <img src="./Projet2-Reservia/images/logo/Reservia.svg" alt="Logo Reservia">
-                    </li>
-                    <li id="hebergements"> <a href="#hebergements_a_marseille">Hébergements</a></li>
-                    <li id="activités"> <a href="#marseille">Activités</a></li>
-                    <li id="inscription"> <a href="#inscription">S'inscrire</a></li>
-                </ul>
-
-            </nav>
+            <div id="logo" class="flex-child"> <img src="./Projet2-Reservia/images/logo/Reservia.svg" alt="Logo Reservia">
+            </div>
+            <div id="hebergements" class="flex-child nav-hover">
+                <a href="#hebergements_a_marseille">  Hébergements</a>
+            </div>
+            <div id="activités" class=" flex-child nav-hover">
+                <a href="#marseille">Activités</a> </div>
+            <div id="inscription" class="flex-child"> <a href="#inscription">S'inscrire</a> </div>
         </header>
 
         <section>
@@ -49,7 +43,7 @@
             </div>
             <div id="filtres">
                 <p>Filtres</p>
-                <ul>
+                <ul class="liste_filtres">
                     <li id="billet"> <i class="fas fa-money-bill-wave"></i> Économique </li>
                     <li id="enfant"> <i class="fas fa-child"></i> Familial</li>
                     <li id="coeur"> <i class="fas fa-heart"></i> Romantique </li>
