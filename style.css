@@ -120,7 +120,7 @@ button {
 }
 
 
-/* barre de recherche finie*/
+/* barre de recherche */
 
 ul {
     list-style-type: none;
@@ -634,12 +634,6 @@ footer p {
         margin-top: 25px;
         font-size: 1.125rem;
     }
-    #coeur {
-        margin-left: 0;
-    }
-    #billet {
-        margin-left: 0;
-    }
     /* HEBERGEMENT A MARSEILLE ---- SECTION 2 */
     #hebergements_a_marseille {
         flex-flow: column-reverse;
@@ -767,6 +761,9 @@ footer p {
         width: 100%;
         margin: 10px;
     }
+    /* .pop1 {
+        margin-bottom: 3em;
+    } */
     #les_plus_populaires img {
         width: 40%;
     }
