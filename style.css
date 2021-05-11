@@ -128,8 +128,8 @@ ul {
 
 .liste_filtres {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 15px 40px 0 0;
 }
 
 #filtres {
@@ -361,19 +361,12 @@ aside {
 .populaires {
     display: flex;
     align-items: center;
-    padding-right: 85px;
     font-size: 1.2rem;
-    ;
+    justify-content: space-between;
 }
 
 .populaires h2 {
-    padding-right: 50px;
     font-size: 1.2rem;
-    ;
-}
-
-.fa-chart-line:before {
-    padding-left: 480%
 }
 
 #les_plus_populaires {
@@ -407,6 +400,7 @@ aside {
 
 .pop {
     margin-bottom: 15px;
+    width: 100%;
 }
 
 
@@ -547,7 +541,7 @@ footer p {
 
 /* -------------------------------------------------------------------------- */
 
-@media all and (max-width: 550px) {
+@media all and (max-width: 569px) {
     main {
         padding: 0;
     }
@@ -637,7 +631,6 @@ footer p {
         padding: 15px 2px 7px 22px;
     }
     #filtres p {
-        margin-bottom: -5px;
         margin-top: 25px;
         font-size: 1.125rem;
     }
@@ -721,15 +714,8 @@ footer p {
     #bouton_info p {
         font-size: 1rem;
     }
-    #chien,
-    #coeur,
-    #billet,
-    #enfant {
-        margin-left: 0;
-    }
-    #enfant,
     #chien {
-        margin-left: 15px;
+        margin-left: 0;
     }
 }
 
@@ -739,14 +725,6 @@ footer p {
     }
     #recherche {
         width: 180px;
-    }
-    #chien,
-    #coeur,
-    #billet {
-        margin-left: 0;
-    }
-    #enfant {
-        margin-left: 10px;
     }
 }
 
@@ -759,7 +737,7 @@ footer p {
 
 /* ------------------------------------------------------------------------------------------------------------*/
 
-@media all and (min-width: 551px) and (max-width: 1130px) {
+@media all and (min-width: 570px) and (max-width: 1130px) {
     main {
         padding-left: 25px;
     }
@@ -772,12 +750,21 @@ footer p {
     #chien {
         width: 180px;
     }
+    #chien,
+    #billet,
+    #coeur,
+    #enfant {
+        margin-left: 5px;
+    }
     #hebergements_a_marseille {
         flex-wrap: wrap-reverse;
     }
+    .logementmarseille1 div {
+        margin-right: 0;
+    }
     #les_plus_populaires,
     .logementmarseille {
-        width: auto;
+        width: 100%;
         margin: 10px;
     }
     #les_plus_populaires img {
@@ -785,9 +772,6 @@ footer p {
     }
     #les_plus_populaires figcaption p {
         margin-bottom: 4em;
-    }
-    .populaires h2 {
-        margin-right: 260px;
     }
     .logementmarseille img {
         width: 35vw;
@@ -824,7 +808,12 @@ footer p {
     footer {
         margin-right: -10px;
     }
+    #apropos {
+        margin-right: 5%;
+        margin-left: 20px;
+    }
     #assistance {
-        margin-left: 10%;
+        margin-left: 8%;
+        margin-right: 2%;
     }
 }
